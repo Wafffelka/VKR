@@ -1,2 +1,4 @@
-package com.example.WeatherServiceTest;public class RecommendationServiceTest {
+package com.example;
+
+public class RecommendationServiceTest {
 }
