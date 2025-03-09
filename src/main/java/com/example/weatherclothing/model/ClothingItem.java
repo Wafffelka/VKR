@@ -14,10 +14,10 @@ public class ClothingItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userId; // ID пользователя, чтобы хранить гардероб по пользователям
+    private String userId;
     private String type; // Тип одежды
-    private double temperature; // Температура, при которой пользователь носит вещь
-    private String color; // Цвет одежды
+    private double temperature;
+    private String color;
 
     @ElementCollection
     private Set<String> tags; // Дополнительные теги

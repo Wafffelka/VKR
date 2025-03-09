@@ -34,12 +34,9 @@ public class WeatherController {
         String weatherData = weatherService.getWeatherData(city);
         UserPreference preference = userPreferenceRepository.findByUserId(userId);
         String recommendation = recommendationService.generateRecommendation(weatherData, activity, preference, userId);
-
         List<ClothingItem> userClothing = clothingRepository.findByUserId(userId);
         Set<String> availableColors = userClothing.stream().map(ClothingItem::getColor).collect(Collectors.toSet());
-
         recommendation += "\nКакой цвет вы предпочитаете сегодня? Доступные цвета: " + availableColors;
-
         return ResponseEntity.ok(recommendation);
     }
 }

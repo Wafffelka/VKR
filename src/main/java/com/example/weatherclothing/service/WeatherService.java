@@ -26,7 +26,7 @@ public class WeatherService {
         }
 
         // Делаем запрос к API
-        String apiKey = "your_api_key";
+        String apiKey = "e318e730de6e7efe9ba52e450398d45b";
         String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=metric";
         String response = restTemplate.getForObject(url, String.class);
 
